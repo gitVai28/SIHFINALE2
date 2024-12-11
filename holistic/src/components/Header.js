@@ -23,7 +23,7 @@ const Header = () => {
         <Link to="/time-series-analysis" className="hover:text-blue-400" style={{ fontFamily: 'Arial, sans-serif' }}>Time Series Analysis</Link>
         {/* <Link to="/predictions" className="hover:text-blue-400" style={{ fontFamily: 'Arial, sans-serif' }}>Predictions</Link> */}
         <Link to="/admin" className="hover:text-blue-400" style={{ fontFamily: 'Arial, sans-serif' }}>admin</Link>
-          
+        <Link to="/report" className="hover:text-blue-400" style={{ fontFamily: 'Arial, sans-serif' }}>Report</Link>
       </nav>
     </header>
   );

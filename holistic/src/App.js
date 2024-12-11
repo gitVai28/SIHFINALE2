@@ -5,7 +5,8 @@ import Header from './components/Header';
 import Home from './pages/Home'
 import Admin from './pages/admin'
 import Time from './pages/DisasterReport'
-
+import Report from './pages/Report'
+import Storage from './pages/Storage'
 function App() {
   return (
     <Router>
@@ -21,8 +22,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<Admin/>}/>
             <Route path="/time-series-analysis" element={<Time/>}/>
-              
-            
+            <Route path='/report' element={<Report/>}/>
+            <Route path='/archive' element={<Storage/>}/>
           </Routes>
         </div>
       </div>
