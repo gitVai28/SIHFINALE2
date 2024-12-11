@@ -28,7 +28,7 @@ const DisasterDetails = ({ disasterType, items }) => {
   );
 };
 
-const App = () => {
+const DisasterAlert = () => {
   const [selectedDisasterType, setSelectedDisasterType] = useState(null);
 
   const groupedData = data.reduce((acc, item) => {
@@ -44,27 +44,25 @@ const App = () => {
   };
 
   return (
-    <div className="flex justify-end w-full">
-      <div className="w-1/2 p-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-          {Object.keys(groupedData).map((disasterType) => (
-            <DisasterTypeCard
-              key={disasterType}
-              disasterType={disasterType}
-              items={groupedData[disasterType]}
-              onCardClick={handleCardClick}
-            />
-          ))}
-        </div>
-        {selectedDisasterType && (
-          <DisasterDetails
-            disasterType={selectedDisasterType}
-            items={groupedData[selectedDisasterType]}
+    <div className="w-1/2 p-8 overflow-y-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+        {Object.keys(groupedData).map((disasterType) => (
+          <DisasterTypeCard
+            key={disasterType}
+            disasterType={disasterType}
+            items={groupedData[disasterType]}
+            onCardClick={handleCardClick}
           />
-        )}
+        ))}
       </div>
+      {selectedDisasterType && (
+        <DisasterDetails
+          disasterType={selectedDisasterType}
+          items={groupedData[selectedDisasterType]}
+        />
+      )}
     </div>
   );
 };
 
-export default App;
+export default DisasterAlert;

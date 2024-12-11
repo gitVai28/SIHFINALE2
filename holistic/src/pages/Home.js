@@ -1,12 +1,14 @@
-import React from 'react'
-import Alert from '../components/DisasterAlert'
+import React from 'react';
+import DisasterAlert from '../components/DisasterAlert';
+import GoogleMapComponent from '../components/GoogleMapComponent';
 
 const Home = () => {
   return (
-    <div>
-      <Alert/>
+    <div className="flex h-screen">
+      <DisasterAlert />
+      <GoogleMapComponent />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
